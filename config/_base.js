@@ -44,6 +44,7 @@ const config = {
     'react',
     'react-d3',
     'react-flexbox',
+    'react-google-maps',
     'react-redux',
     'react-router',
     'react-router-redux',

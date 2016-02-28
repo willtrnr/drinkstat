@@ -4,6 +4,7 @@ import webpack from 'webpack'
 import webpackConfig from '../build/webpack.config'
 import historyApiFallback from 'koa-connect-history-api-fallback'
 import serve from 'koa-static'
+import proxy from 'koa-proxy'
 import _debug from 'debug'
 import config from '../config'
 import webpackProxyMiddleware from './middleware/webpack-proxy'
@@ -13,6 +14,12 @@ import webpackHMRMiddleware from './middleware/webpack-hmr'
 const debug = _debug('app:server')
 const paths = config.utils_paths
 const app = new Koa()
+
+app.use(convert(proxy({
+  host: 'http://f08e7d86.ngrok.io',
+  match: /^\/api\//,
+  map: () => '/'
+})))
 
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement isomorphic

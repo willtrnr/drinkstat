@@ -42,7 +42,7 @@ export default class LoginView extends React.Component<void, Props, void> {
       <View height='100%' style={{
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url("' + BgImage + '")',
+        backgroundImage: `url("${BgImage}")`,
         backgroundSize: 'cover'
       }}>
         <Paper style={{ padding: '20px' }}>
