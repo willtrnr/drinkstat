@@ -40,30 +40,67 @@ export default class StocksView extends React.Component<void, Props, void> {
     return (
       <View column style={{ alignItems: 'center' }}>
         <View row width='auto'>
-          <Paper style={{ margin: '15px', padding: '10px 40px' }}>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
-              data={[{ label: 'Empty', value: 15 }, { label: 'Remaining', value: 85 }]}
+              data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 4 }]}
+              showOuterLabels={false}
+              showInnerLabels={false}
               width={100}
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel Chart' />
+              title='Barrel 1' />
           </Paper>
-          <Paper style={{ margin: '15px', padding: '10px 40px' }}>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
-              data={[{ label: 'Empty', value: 15 }, { label: 'Remaining', value: 85 }]}
+              data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 3 }]}
+              showOuterLabels={false}
+              showInnerLabels={false}
               width={100}
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel Chart' />
+              title='Barrel 2' />
+          </Paper>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
+            <PieChart
+              data={[{ label: 'Empty', value: 3 }, { label: 'Remaining', value: 2 }]}
+              showOuterLabels={false}
+              showInnerLabels={false}
+              width={100}
+              height={100}
+              radius={50}
+              innerRadius={40}
+              title='Barrel 3' />
+          </Paper>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
+            <PieChart
+              data={[{ label: 'Empty', value: 2 }, { label: 'Remaining', value: 1 }]}
+              showOuterLabels={false}
+              showInnerLabels={false}
+              width={100}
+              height={100}
+              radius={50}
+              innerRadius={40}
+              title='Barrel 4' />
+          </Paper>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
+            <PieChart
+              data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 7 }]}
+              showOuterLabels={false}
+              showInnerLabels={false}
+              width={100}
+              height={100}
+              radius={50}
+              innerRadius={40}
+              title='Barrel 5' />
           </Paper>
         </View>
         <View row width='auto'>
-          <Paper style={{ margin: '15px', padding: '10px 40px' }}>
+          <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             {(this.state.stats) ? <LineChart
               data={this.state.stats}
-              width={1000}
+              width={900}
               height={400}
               title='Level Chart'/> : <LinearProgress />}
           </Paper>
