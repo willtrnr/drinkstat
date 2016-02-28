@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import AppNav from 'components/AppNav'
+import AppNav from 'containers/AppNav'
 import '../../styles/core.scss'
 
 // Note: Stateless/function components *will not* hot reload!

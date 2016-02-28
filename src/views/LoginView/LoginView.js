@@ -29,7 +29,7 @@ export default class LoginView extends React.Component<void, Props, void> {
       setTimeout(() => {
         this.setState({ ...this.state, loading: false })
         this.props.setUser({ id: 42, firstname: 'John', lastname: 'Doe', email: this.state.email })
-      }, 2000)
+      }, 1000)
     }
   }
 
@@ -51,7 +51,6 @@ export default class LoginView extends React.Component<void, Props, void> {
           </View>
           {(this.state.loading) ? <CircularProgress /> : (
             <View column style={{ alignItems: 'center' }}>
-              <h1 style={{ color: '#757575' }}>DrinkStat</h1>
               <TextField
                 hintText='E-Mail'
                 type='email'
