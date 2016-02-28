@@ -38,7 +38,10 @@ export class AppNav extends React.Component<void, Props, void> {
 
   setLeftNavOpen = (open) => this.setState({ navOpen: open })
 
-  onRequestChangeList = (_, e) => this.props.push(e)
+  onRequestChangeList = (_, e) => {
+    this.props.push(e)
+    this.setLeftNavOpen(false)
+  }
 
   render () {
     return (

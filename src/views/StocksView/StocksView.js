@@ -8,9 +8,12 @@ import { LineChart, PieChart } from 'react-d3'
 export default class StocksView extends React.Component<void, Props, void> {
   constructor (props) {
     super(props)
-    this.state = {}
     this.getStats()
-    // setInterval(this.getStats, 10000)
+    this.state = { job: setInterval(this.getStats, 2000) }
+  }
+
+  componentWillUnmount () {
+    this.state.job && clearTimeout(this.state.job)
   }
 
   getStats = () => {
@@ -34,7 +37,6 @@ export default class StocksView extends React.Component<void, Props, void> {
   }
 
   render () {
-    console.log(this.state.stats)
     return (
       <View column style={{ alignItems: 'center' }}>
         <View row width='auto'>
