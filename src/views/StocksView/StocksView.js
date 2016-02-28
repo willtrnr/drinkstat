@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react'
-import LinearProgress from 'material-ui/lib/linear-progress'
+import CircularProgress from 'material-ui/lib/circular-progress'
 import Paper from 'material-ui/lib/paper'
 import View from 'react-flexbox'
 import { LineChart, PieChart } from 'react-d3'
@@ -105,7 +105,7 @@ export default class StocksView extends React.Component<void, Props, void> {
               data={this.state.stats}
               width={850}
               height={350}
-              title='Chipie'/> : <LinearProgress />}
+              title='Chipie'/> : <CircularProgress />}
           </Paper>
         </View>
       </View>
