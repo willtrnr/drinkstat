@@ -37,9 +37,13 @@ const config = {
     colors : true
   },
   compiler_vendor : [
+    'classnames',
+    'd3',
     'history',
     'material-ui',
     'react',
+    'react-d3',
+    'react-flexbox',
     'react-redux',
     'react-router',
     'react-router-redux',

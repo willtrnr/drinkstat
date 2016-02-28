@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import AppNav from 'components/AppNav'
 import '../../styles/core.scss'
 
 // Note: Stateless/function components *will not* hot reload!
@@ -12,10 +13,9 @@ import '../../styles/core.scss'
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
-      </div>
+    <div>
+      <AppNav />
+      {children}
     </div>
   )
 }

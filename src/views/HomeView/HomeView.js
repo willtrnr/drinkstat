@@ -2,9 +2,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { increment, doubleAsync } from '../../redux/modules/counter'
-import { RaisedButton } from 'material-ui'
-import DuckImage from './Duck.jpg'
-import classes from './HomeView.scss'
+import RaisedButton from 'material-ui/lib/raised-button'
 
 // We can use Flow (http://flowtype.org/) to type our component's props
 // and state. For convenience we've included both regular propTypes and
@@ -31,18 +29,8 @@ export class HomeView extends React.Component<void, Props, void> {
 
   render () {
     return (
-      <div className='container text-center'>
-        <div className='row'>
-          <div className='col-xs-2 col-xs-offset-5'>
-            <img className={classes.duck} src={DuckImage} alt='This is a duck, because Redux.' />
-          </div>
-        </div>
-        <h1>Welcome to the React Redux Starter Kit</h1>
-        <h2>
-          Sample Counter:
-          {' '}
-          <span className={classes['counter--green']}>{this.props.counter}</span>
-        </h2>
+      <div>
+        <h1>{this.props.counter}</h1>
         <RaisedButton label='Increment' onClick={this.props.increment} />
         {' '}
         <RaisedButton label='Double (Async)' onClick={this.props.doubleAsync} />
@@ -54,6 +42,7 @@ export class HomeView extends React.Component<void, Props, void> {
 const mapStateToProps = (state) => ({
   counter: state.counter
 })
+
 export default connect((mapStateToProps), {
   increment: () => increment(1),
   doubleAsync

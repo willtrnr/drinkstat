@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
+import Authentication from 'components/Authentication'
 
 export default class Root extends React.Component {
   static propTypes = {
@@ -11,9 +12,11 @@ export default class Root extends React.Component {
 
   get content () {
     return (
-      <Router history={this.props.history}>
-        {this.props.routes}
-      </Router>
+      <Authentication>
+        <Router history={this.props.history}>
+          {this.props.routes}
+        </Router>
+      </Authentication>
     )
   }
 
