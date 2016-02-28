@@ -1,5 +1,8 @@
 /* @flow */
 import React from 'react'
+import View from 'react-flexbox'
+import Paper from 'material-ui/lib/paper'
+import CreditCard from './credit_card.png'
 
 export default class BillingView extends React.Component {
   constructor (props) {
@@ -9,16 +12,18 @@ export default class BillingView extends React.Component {
 
   render () {
     return (
+      <View column style={{ alignItems: 'center' }}>
         <View row width='auto'>
           <Paper style={{ margin: '15px', padding: '10px 40px' }}>
-            {(this.state.stats) ? <LineChart
-              data={this.state.stats}
-              width={1000}
-              height={400}
-              title='Level Chart'/> : <LinearProgress />}
+            <img width={310} height={276} src={CreditCard} />
           </Paper>
         </View>
-        //<img src="credit_card.png"/>
+        <View row width='auto'>
+          <Paper style={{ margin: '15px', padding: '10px 40px' }}>
+            <h1>Informations: </h1>
+          </Paper>
+        </View>
+      </View>
     )
   }
 }
