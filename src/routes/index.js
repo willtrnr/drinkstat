@@ -9,10 +9,12 @@ import { Route, IndexRoute } from 'react-router'
 import CoreLayout from 'layouts/CoreLayout/CoreLayout'
 import HomeView from 'views/HomeView/HomeView'
 import StocksView from 'views/StocksView/StocksView'
+import BillingView from 'views/BillingView/BillingView'
 
 export default (store) => (
   <Route path='/' component={CoreLayout}>
     <IndexRoute component={HomeView} />
     <Route path='stocks' component={StocksView} />
+    <Route path='billing' component={BillingView} />
   </Route>
 )

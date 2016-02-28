@@ -4,10 +4,17 @@ import View from 'react-flexbox'
 import Paper from 'material-ui/lib/paper'
 import { BarChart } from 'react-d3'
 
+import HeatMap from './heatmap.jpg'
+
 export default class HomeView extends React.Component {
   render () {
     return (
       <View column style={{ alignItems: 'center' }}>
+        <View row width='auto'>
+          <Paper style={{ margin: '10px', padding: '10px' }}>
+            <img src={HeatMap} style={{ padding: 0, margin: 0 }} />
+          </Paper>
+        </View>
         <View row width='auto'>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <BarChart
