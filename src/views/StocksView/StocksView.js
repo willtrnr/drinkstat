@@ -42,14 +42,17 @@ export default class StocksView extends React.Component<void, Props, void> {
         <View row width='auto'>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
-              data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 4 }]}
+              data={[
+                { label: 'Empty', value: 1 },
+                { label: 'Remaining', value: 4 }
+              ]}
               showOuterLabels={false}
               showInnerLabels={false}
               width={100}
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel 1' />
+              title='Chipie' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
@@ -60,7 +63,7 @@ export default class StocksView extends React.Component<void, Props, void> {
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel 2' />
+              title='Matante' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
@@ -71,7 +74,7 @@ export default class StocksView extends React.Component<void, Props, void> {
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel 3' />
+              title='Blanche' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
@@ -82,7 +85,7 @@ export default class StocksView extends React.Component<void, Props, void> {
               height={100}
               radius={50}
               innerRadius={40}
-              title='Barrel 4' />
+              title='Ptite Criss' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
@@ -102,7 +105,7 @@ export default class StocksView extends React.Component<void, Props, void> {
               data={this.state.stats}
               width={900}
               height={400}
-              title='Level Chart'/> : <LinearProgress />}
+              title='Chipie'/> : <LinearProgress />}
           </Paper>
         </View>
       </View>
