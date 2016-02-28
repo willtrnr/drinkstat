@@ -22,22 +22,22 @@ export default class HomeView extends React.Component {
                 values: [
                   { x: 'Chipie', y: 12 },
                   { x: 'Matante', y: 10 },
-                  { x: 'Blanche', y: 13 },
-                  { x: 'Ptite Criss', y: 11 },
-                  { x: 'Beer 5', y: 14 }
+                  { x: 'Veuve Noire', y: 13 },
+                  { x: 'Tite\'Kriss', y: 11 },
+                  { x: 'Jouflue', y: 14 }
                 ]
               }, {
                 values: [
                   { x: 'Chipie', y: 13 },
                   { x: 'Matante', y: 12 },
-                  { x: 'Blanche', y: 11 },
-                  { x: 'Ptite Criss', y: 10 },
-                  { x: 'Beer 5', y: 14 }
+                  { x: 'Veuve Noire', y: 11 },
+                  { x: 'Tite\'Kriss', y: 10 },
+                  { x: 'Jouflue', y: 14 }
                 ]
               }]}
               title='Monthly Consumption'
-              width={900}
-              height={400} />
+              width={850}
+              height={350} />
           </Paper>
         </View>
       </View>

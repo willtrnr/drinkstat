@@ -48,10 +48,10 @@ export default class StocksView extends React.Component<void, Props, void> {
               ]}
               showOuterLabels={false}
               showInnerLabels={false}
-              width={100}
-              height={100}
-              radius={50}
-              innerRadius={40}
+              width={90}
+              height={90}
+              radius={45}
+              innerRadius={35}
               title='Chipie' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
@@ -59,10 +59,10 @@ export default class StocksView extends React.Component<void, Props, void> {
               data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 3 }]}
               showOuterLabels={false}
               showInnerLabels={false}
-              width={100}
-              height={100}
-              radius={50}
-              innerRadius={40}
+              width={90}
+              height={90}
+              radius={45}
+              innerRadius={35}
               title='Matante' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
@@ -70,41 +70,41 @@ export default class StocksView extends React.Component<void, Props, void> {
               data={[{ label: 'Empty', value: 3 }, { label: 'Remaining', value: 2 }]}
               showOuterLabels={false}
               showInnerLabels={false}
-              width={100}
-              height={100}
-              radius={50}
-              innerRadius={40}
-              title='Blanche' />
+              width={90}
+              height={90}
+              radius={45}
+              innerRadius={35}
+              title='Veuve Noire' />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
               data={[{ label: 'Empty', value: 2 }, { label: 'Remaining', value: 1 }]}
               showOuterLabels={false}
               showInnerLabels={false}
-              width={100}
-              height={100}
-              radius={50}
-              innerRadius={40}
-              title='Ptite Criss' />
+              width={90}
+              height={90}
+              radius={45}
+              innerRadius={35}
+              title={'Tite\'Kriss'} />
           </Paper>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             <PieChart
               data={[{ label: 'Empty', value: 1 }, { label: 'Remaining', value: 7 }]}
               showOuterLabels={false}
               showInnerLabels={false}
-              width={100}
-              height={100}
-              radius={50}
-              innerRadius={40}
-              title='Barrel 5' />
+              width={90}
+              height={90}
+              radius={45}
+              innerRadius={35}
+              title='Jouflue' />
           </Paper>
         </View>
         <View row width='auto'>
           <Paper style={{ margin: '10px', padding: '10px 40px' }}>
             {(this.state.stats) ? <LineChart
               data={this.state.stats}
-              width={900}
-              height={400}
+              width={850}
+              height={350}
               title='Chipie'/> : <LinearProgress />}
           </Paper>
         </View>

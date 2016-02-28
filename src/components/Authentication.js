@@ -12,7 +12,7 @@ export default class Authentication extends React.Component<void, Props, void> {
 
   constructor (props) {
     super(props)
-    this.state = { user: true } // Skip login for pres mode
+    this.state = { user: { firstname: 'John', lastname: 'Doe' } } // Skip login for pres mode
   }
 
   handleSetUser = (user) => this.setState({ user })
